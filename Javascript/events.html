@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1 ondblclick="showalert()">Javascript Events</h1>
+    
+    <form action="hello.html" >
+        Name: <input type="text" name="name" id="name" onchange="changemessage()" onblur="blurfunction()">
+
+        Email: <input type="email" name="email" id="email" onkeypress="keypressfunction()" >
+        
+        <button type="button" onclick="validateaform()">Submit</button>
+    </form>
+
+    <script>
+        function keypressfunction(){
+            alert("Key Press");
+        }
+
+        function keyupfunction(){
+            alert("Key Up");
+        }
+
+        function keydownfunction(){
+            alert("Key Down");
+        }
+
+        function blurfunction(){
+            alert("Tab Cicked")
+        }
+
+        function changemessage(){
+            alert("Name entered");
+        }
+
+        function showalert(){
+            alert("Double Clicked");
+        }
+
+        function showmessage(){
+            alert("Hello! Hi How are you!")
+        }
+
+        function validateaform(){
+            alert("Ok! We will do it");
+        }
+
+        function submitaform(){
+            alert("Hello Javascript, Form Submitted")
+            return false;
+        }
+
+        /*
+        //Events
+        1. onsubmit
+        2. onclick
+        3. ondbclick
+        4. onblur
+        5. onchage
+        6. onkeyup
+        7. onkeydown
+        */
+    </script>
+</body>
+</html>
+
