@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+</head>
+<body>
+    <h1 id="title" name="title">Hello World</h1>
+
+    <script>
+        //var title = document.getElementById('title').textContent;
+        //var title = document.getElementsByClassName('title')[1].textContent;
+        //var title = document.getElementsByTagName('title')[0].textContent;
+        document.getElementById("title").innerHTML = "Hello Javascript";
+        document.getElementById("title").style.color="red";
+        document.getElementById("title").style.background="yellow";
+        
+    </script>
+</body>
+</html>
