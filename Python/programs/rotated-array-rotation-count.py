@@ -18,5 +18,9 @@ for k in range(len(numsarr)):
     rotated = numsarr[k:] + numsarr[:k]
     if(rotated == sorted(rotated)):
         count = k
+        break
 
-print(count)
+if count == 0:
+    print(-1)
+else:
+    print(count)
