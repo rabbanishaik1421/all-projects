@@ -4,17 +4,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dom Manipulation</title>
 </head>
-<body>
+<body id="body">
     <h1 id="title" name="title">Hello World</h1>
+
+    <button id="btn" type="button">Click Me</button>
 
     <script>
         //var title = document.getElementById('title').textContent;
         //var title = document.getElementsByClassName('title')[1].textContent;
         //var title = document.getElementsByTagName('title')[0].textContent;
-        document.getElementById("title").innerHTML = "Hello Javascript";
-        document.getElementById("title").style.color="red";
-        document.getElementById("title").style.background="yellow";
-        
+        // document.getElementById("title").innerHTML = "Hello Javascript";
+        // document.getElementById("title").style.color="red";
+        // document.getElementById("title").style.background="yellow";
+       
+        document.getElementById('btn').addEventListener('click', function(){
+            document.getElementById('title').style.color="red";
+            document.getElementById('title').innerHTML = "Hello Javascript";
+
+            let paragraph = document.createElement('p');
+            paragraph.innerHTML="Welcome to Javascript Tutorial";
+
+            document.getElementById('body').appendChild(paragraph);
+        });
+
+        document.getElementById('title').addEventListener('mouseover', function(){
+            document.getElementById('title').style.color = "blue";
+        });
+
+        document.getElementById('title').addEventListener('mouseout', function(){
+            document.getElementById('title').style.color = "red";
+        });
+
     </script>
 </body>
 </html>
