@@ -22,17 +22,10 @@ Sample Output:
 n=5
 k=1
 nums = "3 2 1 2 3"
-result = ""
-numarr = list(map(int, nums.split()))
-for i in range(n):
-   j=i+1
-   if j < n:
-    diff = numarr[i] - numarr[j]
-    if diff == k:
-        result = numarr.index(k)
-        break
+n, k = list(map(int, input().split()))
+nums = list(map(int, input().split()))
 
-if result == "":
-   print(-1)
+if k in nums:
+    print(nums.index(k) + 1)
 else:
-   print(result)
+    print(-1)
