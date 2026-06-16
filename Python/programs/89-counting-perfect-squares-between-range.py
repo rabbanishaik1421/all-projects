@@ -14,13 +14,13 @@ Sample Input:
 Sample Output:
 2
 '''
-nums = "2 3"
+nums = "2 10"
 i, n = list(map(int, nums.split()))
-squares = []
-while i<n:
-    sq = i**2
-    if sq<n:
-        squares.append(sq)
-    i+=1
+count=0
+for j in range(i, n+1):
+    sq = j ** 2
+    if sq > j and sq<n:
+        count+=1
+    j+=1
 
-print(len(squares) if squares else -1)
+print(count if count>0 else -1)
