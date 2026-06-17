@@ -50,10 +50,82 @@ def calculate_min(a):
 
 #calculate sum
 def calculate_sum(nums):
-    from functools import reduce
-
-    result = reduce(lambda x, y:x+y, nums)
+    result = sum(nums)
     return result
+
+#calculate average
+def calculate_average(nums):
+    result = sum(nums) / len(nums)
+    return result
+
+#Factorial of a number
+def calculate_factorial(num):
+    i=1
+    factorial=1
+    for n in range(i, num+1):
+        factorial *=n
+    
+    return factorial
+
+#Check prime
+def check_prime(num):    
+    if num < 2:
+        return False
+    
+    for i in range(2, int(num ** 0.5)+1):
+        if n % i == 0:
+            return False
+        
+    return True
+
+#Even or Odd
+def check_evenorodd(num):
+    if num % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+    
+#Area of circle
+def areaofcircle(num):
+    return 3.14 * num * num
+
+#Area of rectangle
+def area_of_rectangle(l, w):
+    return l * w
+
+#Area of triangle
+def area_triangle(b, h):
+    return 0.5 * b * h
+
+#Reverse number
+def reverse_number(num):
+    num = str(num)
+    return num[::-1]
+
+#Count numbers
+def count_digits(num):
+    num = str(num)
+    return len(num)
+
+#Sum of digits
+def sum_of_digits(num):
+    sum = 0
+    num = str(num)
+    nums =list(map(int, num.split()))
+    i = 0
+    while i<len(nums):
+        sum += int(nums[i])
+        i+=1
+    
+    return sum
+
+#Check palindrome number
+def check_palindrome(num):
+    revnum = str(num)[::-1]
+    if num == int(revnum):
+        return True
+    else:
+        return False
 
 while True:
     print("\n Data Calculator")
@@ -71,6 +143,18 @@ while True:
     print("12. Max value")
     print("13. Min value")
     print("14. Sum of numbers")
+    print("15. Average of numbers")
+    print("16. Factorial of a number")
+    print("17. Check prime or not")
+    print("18. Even or odd")
+    print("19. Area of circle")
+    print("20. Area of rectangle")
+    print("21. Area of triangle")
+    print("22. Reverse number")
+    print("23. Count numbers")
+    print("24. Sum of digits")
+    print("25. Check palindrome number")
+    print("26. Exit")
 
     choice = int(input("Enter your choice:"))
 
@@ -172,6 +256,78 @@ while True:
     elif choice == 14:
         numbers = list(map(float, input("Enter numbers: ").split()))
         print("Minimum Value:", calculate_sum(numbers))
+
+    #average of numbers
+    elif choice == 15:
+        numbers = list(map(float, input("Enter numbers: ").split()))
+        print("Minimum Value:", calculate_average(numbers))
+
+    #average of numbers
+    elif choice == 16:
+        num = input("Enter number: ")
+        result = calculate_factorial(num)
+        print("Factorial:", result)
+    
+    #Check price
+    elif choice == 17:
+        num = int(input("Enter number:"))
+        result = check_prime(num)
+        print("Prime Number:", result)
+
+    #Check Even or Odd
+    elif choice == 18:
+        num = int(input("Enter number:"))
+        result = check_evenorodd(num)
+        print("Even or Odd:", result)
+
+    #Area of circle
+    elif choice == 19:
+        num = int(input("Enter number:"))
+        result = areaofcircle(num)
+        print("Area of circle", result)
+
+    #Area of rectangle
+    elif choice == 20:
+        length = int(input("Enter length:"))
+        width = int(input("Enter width:"))
+        result = area_of_rectangle(length, width)
+        print("Area of rectangle", result)
+
+    #Area of triangle
+    elif choice == 21:
+        breadth = int(input("Enter breadth:"))
+        height = int(input("Enter height:"))
+        result = area_triangle(breadth, height)
+        print("Area of triangle", result)
+
+    #Reverse Number
+    elif choice == 22:
+        num = str(input("Enter number:"))
+        revnum = num[::-1]
+        print("Reverse number", revnum)
+
+    #count numbers
+    elif choice == 23:
+        num = str(input("Enter number"))
+        result = count_digits(num)
+        print("Count of digits", result)
+
+    #sum of digits
+    elif choice == 24:
+        num = str(input("Enter number"))
+        result = sum_of_digits(num)
+        print("Count of digits", result)
+
+    #sum of digits
+    elif choice == 25:
+        num = str(input("Enter number"))
+        result = check_palindrome(num)
+        print("Palindrome", result)
+
+    #Exit
+    elif choice == 20:
+        print("Thank you")
+        break
 
     else:
         print("Entered wrong, choice! Please try again")
