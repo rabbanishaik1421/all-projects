@@ -4,12 +4,15 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 
+import Firstcomponent from './components/Firstcomponent'
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
       <h1>My First React App</h1>
+      <Firstcomponent />
     </>
   )
 }
