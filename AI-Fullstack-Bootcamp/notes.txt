@@ -1,2 +1,11 @@
 1. Regular Expression
-2. 
+	re.findall
+	re.finditerator
+	
+2. Pandas Topic
+	import kagglehub
+
+	# Download latest version
+	path = kagglehub.dataset_download("jayapriyadatascience/wineqt-dataset")
+
+	print("Path to dataset files:", path)
