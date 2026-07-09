@@ -75,3 +75,10 @@ wine_df.tail()
 wine_df["fixed acidity"].min()
 
 wine_df[wine_df["fixed acidity"] == wine_df["fixed acidity"].min()]["chlorides"]
+
+What is a DataFrame?
+What is a Series?
+What is shape?
+What does dtypes return?
+What is value_counts()?
+How do you read a CSV file?
