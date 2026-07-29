@@ -1,11 +1,22 @@
-1. Regular Expression
-	re.findall
-	re.finditerator
-	
-2. Pandas Topic
-	import kagglehub
+Module 1:
+1. Series: Series is a one dimensional data structure. It returns the single column with an index column with unique value is assigned to the each row.
 
-	# Download latest version
-	path = kagglehub.dataset_download("jayapriyadatascience/wineqt-dataset")
+2. DataFrame: DataFrame is a two dimensional datastructure in pandas that organized the data into rows and columns. It is similar to exccel spreadsheet or sql table and can store different type of data such as integer or float. It is widely used for data manipulation or anlytics.
 
-	print("Path to dataset files:", path)
+3. Shape: It is an attribute. It will returns the tuple with number of rows and columns. We can get the number of rows as shape[0] and shape[1]. shape[0] will returns the number of rows and shape[1] returns the number of columns.
+
+4. columns: It is also an columns attribute. By using this columns attribute we can get the all columns of series and dataframe. Instead of reading the complete dataframe for columns we can use this attribute to get all the list of columns.
+
+5. Index: An index is a default index for a series and dataframe.
+There are two types
+	=>Default index
+	=>Custom index
+Default Index: Default index is assigned for an each row. Default index are as 0, 1, 2...
+Custom Index: We can assign the custom index to the index. By using the set_index method we can set it to the series or dataframe. reset_index is used to reset the index of series or dataframe
+
+6. dtypes: dtype stands for Data Type. It returns the data types of series or DataFrame.
+df.dtype returns the data type of a single record. and df.dtypes returns the data types of complete columns values.
+
+7. info(): It is a method used to returns the number of rows and number of columns. It also returns the datatypes and missing values.
+
+8. describe(): describe() is a method used to returns number of rows and columns. It also returns the descriptive statistical information of a dataframe.

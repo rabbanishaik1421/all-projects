@@ -228,3 +228,59 @@ df2 = pd.pivot_table(
 )
 
 print(df1, df2)
+
+print("="*50)
+print("# dropna example")
+print("="*50)
+dropna_ex = pd.pivot_table(
+    df,
+    values="Sales",
+    index="Region",
+    columns="Product",
+    aggfunc="sum",
+    dropna=False
+)
+print(dropna_ex)
+
+print("="*50)
+print("# sort example")
+print("="*50)
+sort_ex = pd.pivot_table(
+    df,
+    values="Sales",
+    index="Region",
+    columns="Product",
+    aggfunc="sum",
+    sort=False
+)
+print(sort_ex)
+
+print("="*50)
+print("# observed example")
+print("="*50)
+sort_ex = pd.pivot_table(
+    df,
+    values="Sales",
+    index="Region",
+    columns="Product",
+    aggfunc="sum",
+    sort=False
+)
+print(sort_ex)
+
+# observed = True
+df["Product"] = pd.Categorical(
+    df["Product"],
+    categories=["Laptop", "Tablet"]
+)
+
+observed_ex = pd.pivot_table(
+    df,
+    values="Sales",
+    index="Region",
+    columns="Product",
+    aggfunc="sum",
+    observed=True,
+)
+
+print(observed_ex)
