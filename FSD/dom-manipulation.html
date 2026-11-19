@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title" class="title">Full Stack Development</h1> 
+    <h2 id="title2" class="title">Full Stack Development</h2>    
+    <p id="subtitle" class="subtitle">Document Object Model</p>
+    <img src="123.jpg" id="image" height="300" alt="">
+    <!-- <button type="button" onclick="changeText()">Change Text</button> -->
+    <!-- <button type="button" onclick="changeText2()">Change Text</button> -->
+     <!-- <button type="button" onclick="changeText3()">Change Text</button> -->
+     <!-- <button type="button" onclick="changeText4()">Change Text</button> -->
+      <button type="button" onclick="changeContent()">Change Content</button>
+      <button type="button" onclick="changeImage()">Change Image</button>
+    <script>
+        //id
+        //class
+        //tagname
+        //selector
+        function changeImage(){
+            document.getElementById("image").setAttribute("src", "456.jpg")
+        }
+
+        function changeContent(){
+            document.getElementById("title").innerHTML="<i>Dom Manipulation</i>";
+            document.getElementById("title").style.color="red";
+            document.getElementById("title").style.background="green";
+            document.getElementById("title").style.fontSize="36px";
+        }
+
+        function changeText4(){
+            //document.querySelector(".title").textContent="Helllllllllllllo";
+            let titles = document.querySelectorAll('.title');
+            for(let i=0; i<titles.length; i++){
+                titles[i].textContent="FSD";
+            }
+        }
+
+        function changeText3(){
+            let tags = document.getElementsByTagName("h1");
+            for(let i=0; i<tags.length; i++){
+                tags[i].textContent="FSD";
+            }
+            //document.getElementsByTagName("h1").changeText="FSD";
+        }
+
+        function changeText2(){
+            // document.getElementsByClassName("title").textContent="Hello World";
+
+            let titles = document.getElementsByClassName("title");
+            //console.log(titles);
+            //2
+            for(let i=0; i<titles.length; i++){
+                titles[i].textContent="Hello";
+            }
+        }
+
+        function changeText(){
+            document.getElementById("title").textContent="FSD";
+            document.getElementById("subtitle").style.color="red";
+        }
+
+
+    </script>
+</body>
+</html>
+

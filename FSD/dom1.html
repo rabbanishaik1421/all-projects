@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="title" id="demo">Document Object Model</p>
+    <p class="title" id="demo1">Document methods</p>
+
+    <button type="button" onclick="changeSize()">Click Me</button>
+    <button type="button" onclick="changeColor()">Change Color</button>
+    <button type="button" onclick="changeFontSize()">Change Size</button>
+
+    <script>
+        function changeFontSize(){
+            let elements = document.querySelectorAll(".title");
+            // console.log(elements);
+            for(let i=0; i<elements.length; i++){
+                elements[i].style.fontSize="6px";
+            }
+            
+        }
+
+
+        function changeColor(){
+            let elements = document.getElementsByTagName("p");
+            // console.log(elements);
+            for(let i=0; i<elements.length; i++){
+                elements[i].style.background="green";
+                elements[i].style.color="#fff";
+            }
+            
+        }
+
+
+        function changeSize(){
+            document.querySelector(".title").style.fontSize="28px";
+            document.querySelector(".title").style.color="#060";
+            document.querySelector(".title").style.fontWeight="normal";
+            document.querySelector(".title").style.background="#fafafa";
+        }
+
+        /*function changeColor(){
+            let titles = document.getElementsByClassName("title");
+            // titles[0].style.color="red";
+            console.log(titles.length);
+            for (let i = 0; i < titles.length; i++) {
+                titles[i].style.color="#faa";
+                titles[i].style.fontSize="24px";
+                titles[i].style.fontWeight="normal";
+                titles[i].style.background="#27F5B7";
+                titles[i].style.fontStyle="italic";
+                
+            }
+            
+        }
+
+        function changeText(){
+            let demoText = document.getElementById("demo");
+            //console.log("Before Update", demoText);
+            
+            demoText.textContent="Text Changed!";
+            demoText.style.color="#faa"
+            console.log(demoText.textContent);
+            
+        }*/
+    </script>
+</body>
+</html>

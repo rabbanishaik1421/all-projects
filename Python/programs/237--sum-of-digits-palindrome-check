@@ -1,0 +1,29 @@
+'''
+Problem Statement:
+Given a number N, check if the sum of the digits is a Palindrome. Print 'yes' or 'no' accordingly.
+
+Input Description:
+The input consists of a number N, where 2 <= N <= 1000000000000000000.
+
+Output Description:
+The output should be 'yes' if the sum of the digits of N is a Palindrome, and 'no' otherwise.
+
+Sample Input:
+13
+
+Sample Output:
+yes
+'''
+n = 99999999999994
+n = 654
+n = list(str(n))
+sum = 0
+for i in n:
+    sum = sum + int(i)
+
+revn = str(sum)[::-1]
+revn = int(revn)
+if sum == revn:
+    print("yes")
+else:
+    print("no")
